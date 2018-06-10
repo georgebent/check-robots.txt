@@ -224,6 +224,7 @@ class CheckingManager
         foreach ($all as $key => $fullMessage) {
             $messages[$key] = [
                 'title' => $fullMessage['title'],
+                'ok' => $checking[$key],
                 'status' => $fullMessage[$checking[$key]]['status'],
                 'message' => $fullMessage[$checking[$key]]['message'],
             ];

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CheckRequest;
 use App\Services\CheckingManager;
 use Illuminate\Http\Request;
 
@@ -20,11 +21,11 @@ class CheckingController extends Controller
     }
 
     /**
-     * @param Request $request
+     * @param CheckRequest $request
      * @param CheckingManager $checkingManager
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|mixed
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function check(Request $request, CheckingManager $checkingManager)
+    public function check(CheckRequest $request, CheckingManager $checkingManager)
     {
         $messages = $checkingManager->checkSite($request->site);
 
