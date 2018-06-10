@@ -26,9 +26,8 @@ class CheckingController extends Controller
      */
     public function check(Request $request, CheckingManager $checkingManager)
     {
-        $url = $checkingManager->prepareUrl($request->site);
-        $data = $checkingManager->checkSite($url);
+        $messages = $checkingManager->checkSite($request->site);
 
-        return view('pages.result', compact('data'));
+        return view('pages.result', compact('messages'));
     }
 }

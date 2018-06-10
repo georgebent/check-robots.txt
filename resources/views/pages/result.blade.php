@@ -6,7 +6,7 @@
             <p>Результат</p>
 
             <div class="">
-                {{ var_dump($data) }}
+
             </div>
         </div>
     </div>
